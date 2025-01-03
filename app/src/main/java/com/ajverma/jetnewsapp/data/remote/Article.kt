@@ -1,4 +1,4 @@
-package com.ajverma.jetnewsapp.data.model
+package com.ajverma.jetnewsapp.data.remote
 
 data class Article(
     val author: String,
