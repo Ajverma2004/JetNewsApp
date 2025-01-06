@@ -8,6 +8,7 @@ interface NewsBySearch {
     @GET("v2/everything")
     suspend fun getNewsBySearch(
         @Query("q") q: String,
+        @Query("sort") sort: String = "popularity",
         @Query("apikey") api: String = Constants.API_KEY
     ): News
 }

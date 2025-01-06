@@ -9,6 +9,7 @@ interface NewsByCategories {
     @GET("v2/top-headlines/sources")
     suspend fun getNewsByCategory(
         @Query("category") category: String,
+        @Query("sort") sort: String = "popularity",
         @Query("apikey") api: String = Constants.API_KEY
     ): CategoryResponse
 }
