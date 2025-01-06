@@ -4,6 +4,7 @@ plugins {
     id ("kotlin-kapt")
     id ("dagger.hilt.android.plugin")
     alias(libs.plugins.compose.compiler)
+    kotlin("plugin.serialization") version "2.0.20"
 }
 
 android {
@@ -62,6 +63,26 @@ dependencies {
     kapt ("com.google.dagger:hilt-android-compiler:2.50")
     implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation ("com.github.KwabenBerko:News-API-Java:1.0.2")
+
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+
+    implementation("io.coil-kt.coil3:coil-compose:3.0.4")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.4")
+
+    val nav_version = "2.8.5"
+
+    implementation ("androidx.navigation:navigation-compose:$nav_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+
+
+// Accompanist Navigation Animation
+    implementation ("com.google.accompanist:accompanist-navigation-animation:0.31.5-beta")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

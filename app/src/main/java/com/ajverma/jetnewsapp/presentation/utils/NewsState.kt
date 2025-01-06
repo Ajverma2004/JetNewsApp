@@ -1,4 +1,7 @@
 package com.ajverma.jetnewsapp.presentation.utils
 
-class NewsState {
-}
+data class NewsState<T> (
+    val isLoading: Boolean = false,
+    val data: T? = null,
+    val error: String? = null
+)
