@@ -8,6 +8,7 @@ interface NewsByTopHeadlines {
     @GET("v2/top-headlines")
     suspend fun getNewsByTopHeadlines(
         @Query("country") country: String = "us",
+        @Query("sort") sort: String = "popularity",
         @Query("apikey") api: String = Constants.API_KEY
     ): News
 }
